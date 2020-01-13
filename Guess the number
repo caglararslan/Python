@@ -1,0 +1,18 @@
+import random
+import time
+tahmin_sayi=random.randint(1,40)
+tahmin_hakki=7
+while True:
+    sayi=int(input("Sayi Giriniz: "))
+    if (sayi<tahmin_sayi):
+        print("Tahmininiz Sorgulanıyor...")
+        time.sleep(1)
+        print("Yanlış Tahmin! Daha Büyük Sayı Girin")
+        tahmin_sayi-=1
+    elif (sayi>tahmin_sayi):
+        print("Tahmininiz Sorgulanıyor...")
+        time.sleep(1)
+        print("Yanlış Tahmin! Daha Küçük Sayı Girin")
+        tahmin_hakki-=1
+    else:
+        print("TEBRİKLER! KAZANDINIZ...")
