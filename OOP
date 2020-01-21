@@ -1,0 +1,21 @@
+class Çalışan():
+    def __init__(self,ad,maas,departman):
+        self.ad=ad
+        self.maas=maas
+        self.departman=departman
+        def goster(self):
+            print("""
+            Ad: {}
+            Maaş: {}
+            Dpartman: {}
+            """.format(self.ad,self.maas,self.departman))
+            def zamyap(self,zamoranı):
+                self.maas+=zamoranı
+            class Yonetici(Çalışan):
+                def __init__(self,ad,maas,departman,numara,adres):
+                    super(ad,maas,departman)
+                    self.numara=numara
+                    self.adres=adres
+                    
+eleman1=Yonetici("Çağlar",5000,"Web","123","İstanbul")
+eleman1.goster()
