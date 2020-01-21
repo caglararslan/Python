@@ -1,0 +1,60 @@
+import time
+import random
+class Kumanda():
+   def __init__(self,tv_durum="Kapalı",tv_kanallistesi=["TRT"],kanal="TRT",tv_ses=0):
+       self.tv_durum=tv_durum
+       self.tv_kanallistesi=tv_kanallistesi
+       self.kanal=kanal
+       self.tv_ses=tv_ses
+       def tvac(self):
+           if self.tv_durum=="Açık":
+           print("Tv zaten açık")
+           def tvkapa(self):
+               print("Kapatılıyor...")
+               self.tv_durum = "Kapalı"
+           def sesac(self):
+              cevap=input("Açacaksanız > kısacaksanız < a basınız...")
+               if(cevap==">"):
+                  self.tv_ses+=1
+               elif(cevap=="<"):
+                   self.tv_ses-=1
+                   def kanalekle(self,yenikanal):
+                       print("Kanal Ekleniyor...")
+                       time.sleep(1)
+                       self.tv_kanallistesi.append(yenikanal)
+                       def rastgelekanal(self):
+                           rastgele=random.randint(0,len(self.tv_kanallistesi)-1)
+                           self.kanal=rastgele
+                           print("Kanal: "self.kanal)
+                           def __str__(self):
+                               return "Tv Durumu: {}\nTv Ses: {}\nKanal Listesi: {}\n".format(self.tv_durum,self.tv_ses,self.tv_kanallistesi)
+                           kumanda=Kumanda()
+                           print("""
+                           Televizyon Uygulaması
+                           
+                           1.Tv Aç
+                           2.Tv Kapat
+                           3.Ses Ayarları
+                           4.Kanal Ekle
+                           
+                           
+                           """)
+                           while True:
+                               işlem=input("İşlem Seçiniz...")
+                               if(işlem=="q"):
+                                   print("Kapanıyor...")
+                                   break
+
+                               elif(işlem=="1"):
+                                   kumanda.tvac()
+                               elif(işlem=="2"):
+                                   kumanda.tvkapa()
+                               elif(işlem=="3"):
+                                   kumanda.sesac()
+                               elif(işlem=="4"):
+                                   kumanda.kanalekle()
+
+
+
+
+
