@@ -1,0 +1,19 @@
+def toplama(a,b):
+    return a+b
+    def cikarma(a,b):
+        return a-b
+        def carpma(a,b):
+            return a*b
+            def bolme(a,b):
+                return a/b
+                def anafonksiyon(func1,func2,func3,func4,islem_adi):
+                    if(islem_adi=="toplama"):
+                        print(func1(3,4))
+                        elif (islem_adi=="cikarma"):
+                            print(func2(4,3))
+                            elif (islem_adi=="carpma"):
+                                print(func3(3,4))
+                                elif (islem_adi=="bolme"):
+                                    print(func4(10,5))
+                                    else:
+                                        print("Hatalı Giriş...")
