@@ -1,0 +1,19 @@
+def anafonksiyon(islem_adi):
+    def toplama(*args):
+        top=0
+        for i in args:
+            top+=i
+            return top
+            def carpma(*args):
+                carpim=1
+                for i in args:
+                    carpim*=i
+                    return carpim
+
+                   if islem_adi=="toplama":
+                       return toplama
+                       else:
+                           return carpma
+
+                           fonk=islem_adi("toplama")
+                           fonk(2,3,4,5)
