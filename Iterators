@@ -1,0 +1,18 @@
+class playlist():
+    def __init__(self,sarki_listesi):
+        self.sarki_listesi=sarki_listesi
+        self.index=-1
+        def __iter__(self):
+            return self
+            def __next__(self):
+                self.index+=1
+                if self.index<len(self.sarki_listesi):
+                    return self.sarki_listesi[self.index]
+                    else:
+                        self.index=-1
+                        raise StopIteration
+                    sarkilar=playsit["A","B","C"]
+                    iterator=iter(playlist)
+                    print(next(iterator))
+                    print(next(iterator))
+                    print(next(iterator))
