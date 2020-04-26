@@ -1,0 +1,34 @@
+//blog.py
+from flask import Flask,render_template
+
+app=Flask(__name__)
+@app.route("/")
+def index():
+    article=dict()
+    article["title"]="Deneme"
+    article["body"]="Deneme123"
+    article["author"]="Çağlar Arslan"
+
+    return render_template("index.html",article=article)
+
+    
+if __name__=="__main__":
+    app.run(debug=True)
+    
+    //index.html
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Anasayfa</title>
+</head>
+<body>
+<h3>Anasayfa</h3>
+<p>Burası anasayfadır</p>
+<p>{{article["title"] }}</p>
+<p>{{article["body"] }}</p>
+<p>{{article["author"] }}</p>
+</body>
+</html>
