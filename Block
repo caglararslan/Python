@@ -1,0 +1,47 @@
+//blog.py
+
+from flask import Flask,render_template
+
+app=Flask(__name__)
+@app.route("/")
+def index():
+    
+    
+    return render_template("index.html")
+
+    
+if __name__=="__main__":
+    app.run(debug=True)
+    
+    //index.html
+    
+    {% extends "layout.html" %}
+{% block caglar %}
+<p>Bu bir indextir...</p>
+{% endblock  %}
+{% block title %}
+Ana Sayfa
+{% endblock title %}
+
+//layout.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>
+{% block title %}
+Layout
+{% endblock  %}
+</title>
+</head>
+<body>
+<h3>Layout</h3>
+{% block caglar %}
+<p>Bu bir layouttur</p>
+{% endblock  %}
+
+</body>
+</html>
