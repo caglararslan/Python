@@ -1,0 +1,29 @@
+//blog.py
+
+from flask import Flask,render_template
+
+app=Flask(__name__)
+@app.route("/")
+def index():
+    return render_template("index.html",answer="evet")
+@app.route("/about")
+def about():
+    return render_template("about.html")
+   
+if __name__=="__main__":
+    app.run(debug=True)
+    
+    //index.html
+    
+    {% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron text-center">
+<h3>Bloğa Hoşgeldiniz</h3>
+<p>Bilim dünyasındaki son gelişmelerin adresi...</p>
+</div>
+{% if answer=="evet" %}
+<p>Cevap evet...</p>
+{% else %}
+<p>Cevap evet değil...</p>
+{% endif %}
+{% endblock body %}
