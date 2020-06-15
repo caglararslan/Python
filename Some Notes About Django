@@ -14,6 +14,7 @@ Kullanıcı adı,e-mail ve şifre bilgilerini gir.
        content=models.TextField()
        created_date=models.DateTimeField(auto_now_add=TRUE)  şeklinde olması istediğimiz kısımları ekliyoruz.
 3.admin.py kısmını açıyoruz
+4.from .models import Article yazıyoruz.
 4.@admin.register(Article) yaz.
 
 //Admin panelinde liste şeklindeki görünüm düzenleme
