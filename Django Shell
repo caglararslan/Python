@@ -1,0 +1,16 @@
+//Yeni terminal açıp oraya yazıyoruz...
+
+from django.contrib.auth.models import User
+from article.models import Article
+newUser=User(username="denemekullanici",password=123) //Yeni kullanıcı yarattık.
+newUser.save() //Yeni kullanıcıyı kaydettik ve böylece django admin panelinde görünür hale gelmiş oldu.
+newUser2=User(username="denemekullanici2") //Yeni kullanıcı yarattık.
+>>> newUser2.set_password("123") //Yeni kullanıcının şifresini şifreledik
+>>> newUser2.save() //kaydettik
+newUser3=User()
+>>> newUser3.username="denemekullanici3"
+>>> newUser3.set_password("123")
+>>> newUser3.first_name="Çağlar" //Bu şekilde özellik atamaları da sağlayabiliyoruz.
+>>> newUser3.save()
+article=Article(title="Django Shell Deneme",content="içerik içerik",author=newUser3)   //Article yarattık.    
+>>> article.save()
