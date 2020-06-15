@@ -7,4 +7,14 @@ Kullanıcı adı,e-mail ve şifre bilgilerini gir.
 
 //Uygulama oluşturma
 1. 2. panelde python manage.py startapp uygulamaAdi yaz.
+2.models.py nin içine;
+   class Article(models.Model):
+       author=models.ForeignKey("auth.User",on_delete=models.CASCADE)  
+       title=models.CharField(max_lenght=50)
+       content=models.TextField()
+       created_date=models.DateTimeField(auto_now_add=TRUE)  şeklinde olması istediğimiz kısımları ekliyoruz.
+3.admin.py kısmını açıyoruz
+4.@admin.register(Article) yaz.
+
+//Admin panelinde liste şeklindeki görünüm düzenleme
 
