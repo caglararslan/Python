@@ -1,0 +1,8 @@
+// admin.py
+@admin.register(Atricle)
+class ArticleAdmin(admin.ModelAdmin):
+list_display=["author","title","created_field"] //admin panelindeki içeriklerin liste üzerinde gösterilmesi istenen özellikleri gösterir.
+list_display_link=["created_field"]//listede created_field a tıklandığında ilgili makaleyi açar.
+list_filter=["created_field"]//kenarda filtreleme kutucuğu yaratır.
+    class Meta:
+     model=Article
