@@ -4,3 +4,7 @@
 3.Bu noktada admin paneline erişim açılır fakat kullanıcı oluşturmamız gerekir.
 4.python manage.py create superuser yaz.
 Kullanıcı adı,e-mail ve şifre bilgilerini gir.
+
+//Uygulama oluşturma
+1. 2. panelde python manage.py startapp uygulamaAdi yaz.
+
