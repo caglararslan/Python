@@ -17,5 +17,5 @@ Kullanıcı adı,e-mail ve şifre bilgilerini gir.
 4.from .models import Article yazıyoruz.
 4.@admin.register(Article) yaz.
 
-//Admin panelinde liste şeklindeki görünüm düzenleme
+
 
