@@ -1,0 +1,4 @@
+1.Create a folder named Static.
+2.Create style.css file in the Static and write your css codes.
+3.Write STATICFILES_DIRS=[or.path.join(BASE_DIR,"static")] on settings.py
+Write <link rel="stylesheet" href="{% static 'style.css' %}"> on index.html
