@@ -6,3 +6,7 @@ list_display_link=["created_field"]//listede created_field a tıklandığında i
 list_filter=["created_field"]//kenarda filtreleme kutucuğu yaratır.
     class Meta:
      model=Article
+     
+//model.py
+  def __str__(self):
+       return self.title  //İçeriği başlığıyla listeler
