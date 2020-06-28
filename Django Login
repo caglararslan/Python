@@ -1,0 +1,40 @@
+//forms.py at user
+class LoginForm(forms.Form):
+    username=forms.CharField(label="Kullanıcı Adı")
+    password=forms.CharField(label="Parola",widget=forms.PasswordInput)
+
+//views.py at user
+def loginUser(request):
+    form=LoginForm(request.POST or None)
+    context={
+        "form" : form
+    }
+
+    if form.is_valid():
+        username=form.cleaned_data.get("username")
+        password=form.cleaned_data.get("password")
+
+        user=authenticate(username=username,password=password)
+
+        if user is None:
+            messages.info(request,"Kullanıcı Adı Veya Parola Hatalı")
+            return render(request,"login.html",context)
+
+        messages.success(request,"Başarıyla Giriş Yaptınız!")
+        login(request,user)
+        return redirect("index")
+    return render(request,"login.html",context)
+    
+   //login.html
+   {% extends "layout.html" %}
+{% block body %}
+<h3>Giriş Yap</h3>
+<hr>
+<form method="post">
+{% csrf_token %}
+{{form.as_p}}
+<br>
+<button type="submit" class="btn btn-danger">Giriş Yap</button>
+</form>
+
+{% endblock body %}
