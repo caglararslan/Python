@@ -1,0 +1,21 @@
+from selenium import webdriver
+import time
+
+browser=webdriver.Firefox()
+browser.get("twitter.com")
+
+giris_yap=browser.find_element_by_xpath("xpathi buraya yapıştır")
+giris_yap.click()
+
+time.sleep(3)
+
+username=browser.find_element_by_xpath("xpath adresi")
+password=browser.find_element_by_xpath("xpath adresi")
+
+username.send_keys(twitter kullanıcıAdı buraya yazın)
+password.send_keys(twitter şifrenizi buraya yazın)
+
+login=browser.find_element_by_xpath("xpath adresi")
+login.click()
+
+browser.close()
