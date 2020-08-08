@@ -1,0 +1,21 @@
+from selenium import webdriver
+
+import random
+
+import time
+
+browser = webdriver.Firefox()
+
+url="https://eksisozluk.com/galatasaray--33210?p="
+
+pageCount = 1
+
+while pageCount<=10:
+  randomPage = random.randint(1,1250)
+  newUrl = url + str(randomPage)
+  browser.get(newUrl)
+  time.sleep(5)
+  pageCount +=1
+ 
+browser.close() 
+  
